@@ -1,0 +1,17 @@
+package com.synopsis.capacitacion.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.synopsis.capacitacion.entities.ProductEntity;
+import com.synopsis.capacitacion.repository.ProductRepository;
+
+public class ProductService {
+	
+	@Autowired
+	private ProductRepository productRepository;
+	
+	public ProductEntity getById(Long id) {
+		return productRepository.getById(id);
+	}
+
+}

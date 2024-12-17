@@ -1,0 +1,8 @@
+package com.synopsis.capacitacion.service;
+
+import com.synopsis.capacitacion.entities.ProductEntity;
+
+public class ProductService {
+	public ProductEntity getById(Long id);
+
+}

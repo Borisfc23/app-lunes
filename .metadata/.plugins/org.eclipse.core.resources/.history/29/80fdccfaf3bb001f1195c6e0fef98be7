@@ -1,0 +1,5 @@
+package com.synopsis.capacitacion.transactions.entity;
+
+public class Transactions {
+
+}

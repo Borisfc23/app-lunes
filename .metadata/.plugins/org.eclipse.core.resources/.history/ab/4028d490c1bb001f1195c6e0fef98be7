@@ -1,0 +1,16 @@
+package com.synopsis.capacitacion.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.synopsis.capacitacion.entities.ProductEntity;
+import com.synopsis.capacitacion.repository.ProductRepository;
+
+public class ProductServiceImpl implements ProductService{
+	
+	@Autowired
+	private ProductRepository productRepository;
+	
+	
+	
+
+}

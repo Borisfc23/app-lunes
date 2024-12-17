@@ -1,0 +1,5 @@
+package com.synopsis.capacitacion.transactions.repository;
+
+public interface TransactionsRepository {
+
+}

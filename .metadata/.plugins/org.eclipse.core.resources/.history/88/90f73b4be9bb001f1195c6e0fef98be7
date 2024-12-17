@@ -1,0 +1,5 @@
+package com.synopsis.capacitacion.customer.repository;
+
+public interface CustomerRepository {
+
+}

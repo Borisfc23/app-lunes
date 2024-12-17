@@ -1,0 +1,5 @@
+package com.synopsis.capacitacion.product.exception;
+
+public class ResourceNotFound {
+
+}

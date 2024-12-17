@@ -1,0 +1,11 @@
+spring.application.name=product
+server.port=8081
+# URL de conexión a PostgreSQL
+spring.datasource.url=jdbc:postgresql://Boris:5432/fwksynopsis
+spring.datasource.username=postgres
+spring.datasource.password=root
+
+# Driver para PostgreSQL
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=create
