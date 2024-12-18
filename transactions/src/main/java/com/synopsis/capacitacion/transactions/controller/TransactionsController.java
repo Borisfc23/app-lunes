@@ -27,18 +27,11 @@ public class TransactionsController {
 	@GetMapping("/buscar")
 	public List<Transactions> getTransactionsByAccountIban(String accountIban) {
 	    return repositorio.findByAccountIban(accountIban);
-	}
-	
-	@PostMapping("/crear")
-	public void crear(@RequestBody Transactions input) {
-		repositorio.insertTransaction(input.getAccountIban(), input.getAmount(), input.getChannel(),
-                input.getDate(), input.getDescription(), input.getFee(), input.getReference(), input.getStatus());
+}
 		
-	}
-	
 	@GetMapping("/{id}")
 	public Transactions get(@PathVariable long id) {
 		return repositorio.findTransactionById(id);
 	}
-
+	
 }

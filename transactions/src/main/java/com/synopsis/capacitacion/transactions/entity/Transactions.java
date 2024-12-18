@@ -2,6 +2,7 @@ package com.synopsis.capacitacion.transactions.entity;
 
 import java.time.LocalDateTime;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,6 +16,8 @@ public class Transactions {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	private String reference;
+	
+	@Column(name = "accountiban") 
 	private String accountIban;
 	private LocalDateTime date;
 	private Double amount;

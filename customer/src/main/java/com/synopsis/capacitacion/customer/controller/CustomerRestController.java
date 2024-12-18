@@ -1,5 +1,5 @@
 package com.synopsis.capacitacion.customer.controller;
-
+import org.springframework.core.env.Environment;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.synopsis.capacitacion.customer.entities.Customer;
 import com.synopsis.capacitacion.customer.entities.CustomerProduct;
@@ -20,10 +20,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.time.Duration;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -37,10 +39,15 @@ import reactor.netty.http.client.HttpClient;
 @RestController
 @RequestMapping("/customer")
 public class CustomerRestController {
+	
+	@Autowired
+	 private Environment env;
+	
 	@Autowired
 	CustomerRepository customerRepository;
 
-	private final WebClient.Builder webClientBuilder;
+	@Autowired
+    private WebClient.Builder webClientBuilder;
 
 	public CustomerRestController(WebClient.Builder webClientBuilder) {
 		this.webClientBuilder = webClientBuilder;
@@ -107,20 +114,23 @@ public class CustomerRestController {
 			product.setProductName(productName);
 			 
 		}); 
-	    List<TransactionDTO> transactions = getTransactions(customer.getIban());
+	    //List<TransactionDTO> transactions = getTransactions(customer.getIban());
 	   
+	   //customer.setTransactions(transactions);
+	    //SIN USAR DTO
+	    List<Map<String, Object>> transactions = getTransactions2(customer.getIban());
+		   
 	    customer.setTransactions(transactions);
-
 	    return customer;
 	}
 
 	private String getProductName(long id) {
 
 		WebClient build = webClientBuilder.clientConnector(new ReactorClientHttpConnector(client))
-				.baseUrl("http://localhost:8081/product")
+				.baseUrl(env.getProperty("endpoint.ms-product.base-path"))
 				.defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
-				.defaultUriVariables(Collections.singletonMap("url", "http://localhost:8081/product")).build();
-		JsonNode block = build.method(HttpMethod.GET).uri("/" + id).retrieve().bodyToMono(JsonNode.class).block();
+				.defaultUriVariables(Collections.singletonMap("url",env.getProperty("endpoint.ms-product.base-path"))).build();
+		JsonNode block = build.method(HttpMethod.GET).uri(env.getProperty("endpoint.ms-product.path")+ id).retrieve().bodyToMono(JsonNode.class).block();
 
 		String name = block.get("name").asText();
 		return name;
@@ -142,5 +152,21 @@ public class CustomerRestController {
 
 	    return transactions;
 	}
-	
+	//fORMA SIN USAR DTO
+	private List<Map<String, Object>> getTransactions2(String iban) {
+
+	    WebClient build = webClientBuilder.clientConnector(new ReactorClientHttpConnector(client))
+	            .baseUrl(env.getProperty("endpoint.ms-transaction.base-path").concat(env.getProperty("endpoint.ms-transaction.path")))
+	            .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
+	            .build();
+
+	    List<Map<String, Object>> transactions = build.method(HttpMethod.GET)
+	            .uri(uriBuilder -> uriBuilder.queryParam("accountIban", iban).build())  
+	            .retrieve()
+	            .bodyToFlux(new ParameterizedTypeReference<Map<String, Object>>() {})
+	            .collectList() 
+	            .block(); 
+
+	    return transactions;  
+	}
 }
