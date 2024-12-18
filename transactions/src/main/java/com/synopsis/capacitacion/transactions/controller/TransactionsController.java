@@ -34,4 +34,11 @@ public class TransactionsController {
 		return repositorio.findTransactionById(id);
 	}
 	
+	@PostMapping("/create")
+	public Transactions creat(@RequestBody Transactions cuerpo) {
+
+		return repositorio.save(cuerpo);
+	}
+	
+	
 }

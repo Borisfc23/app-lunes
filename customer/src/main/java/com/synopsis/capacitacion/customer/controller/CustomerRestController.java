@@ -93,7 +93,7 @@ public class CustomerRestController {
 		return ResponseEntity.ok(save);
 	}
 
-	@DeleteMapping("/{id}")
+	@DeleteMapping("/delete/{id}")
 	public ResponseEntity<?> delete(@PathVariable long id) {
 		Optional<Customer> findById = customerRepository.findById(id);
 		if (findById.get() != null) {
