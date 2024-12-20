@@ -1,0 +1,13 @@
+mvn clean install package -DskipTests  =>Generamos el jar , en lugar del -DskipTests puedes comentar la clase test 
+
+docker build -t ms-config-server_image --no-cache .
+docker build -t ms-eureka-server_image --no-cache .
+
+docker build -t ms-product_image --no-cache .
+docker build -t ms-transactions_image --no-cache .
+docker build -t ms-customer_image --no-cache .
+
+docker build -t ms-keycloack-adapter --no-cache .
+docker build -t ms-api-gateway --no-cache .
+
+docker-compose up -d keycloak
