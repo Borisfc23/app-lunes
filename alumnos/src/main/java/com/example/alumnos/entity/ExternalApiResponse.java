@@ -14,7 +14,7 @@ public class ExternalApiResponse {
 	private String nombre;
     private String apellido;
     public String getMensajeFormat() {
-        return "id=" + id + ", nombre=" + nombre + ", apellido=" + apellido;
+        return "{"+"id=" + id + ", nombre=" + nombre + ", apellido=" + apellido+"}";
     }
 
 }

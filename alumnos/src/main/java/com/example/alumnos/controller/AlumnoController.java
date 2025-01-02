@@ -1,7 +1,6 @@
 package com.example.alumnos.controller;
 
 import java.time.Duration;
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -13,22 +12,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.reactive.function.client.WebClient;
-
 import com.example.alumnos.entity.AlumnoDTO;
-import com.example.alumnos.entity.Alumnos;
-import com.example.alumnos.entity.ExternalApiResponse;
-
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.MediaType;
 import com.example.alumnos.repository.AlumnoRepository;
 import com.example.alumnos.service.AlumnoService;
-import com.fasterxml.jackson.databind.JsonNode;
 
-import org.springframework.http.client.reactive.ReactorClientHttpConnector;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.epoll.EpollChannelOption;
 import io.netty.handler.timeout.ReadTimeoutHandler;
@@ -38,9 +27,6 @@ import reactor.netty.http.client.HttpClient;
 @RestController
 @RequestMapping("/alumnos")
 public class AlumnoController {
-	@Autowired
-	private Environment env;
-
 	@Autowired
 	AlumnoRepository alumnorepo;
 	
