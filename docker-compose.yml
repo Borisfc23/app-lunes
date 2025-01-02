@@ -88,6 +88,16 @@ services:
     networks:
       - my_network
 
+  ms-alumnos:
+    container_name: ms-alumnos
+    image: ms-alumnos_image:latest
+    environment:
+      JAVA_OPTS: "-Xms256M -Xmx256M -DPOSTGRES_SERVER=jdbc:postgresql://postgres:5432/fwksynopsis -DEUREKA_SERVER=http://registry-discovery:8761/eureka/ -DCONFIG_SERVER=configserver:http://config-server:8888"
+    # ports:
+    #   - "8082:8082"
+    networks:
+      - my_network
+
   ms-keycloack-adapter:
     container_name: ms-keycloack-adapter
     image: ms-keycloack-adapter:latest

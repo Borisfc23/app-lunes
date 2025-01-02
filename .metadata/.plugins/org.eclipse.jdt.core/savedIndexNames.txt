@@ -76,7 +76,6 @@ INDEX VERSION 1.134+D:\PROGRAMAS\curso-microservicios\.metadata\.plugins\org.ecl
 3690321840.index
 2448786676.index
 3192977546.index
-1128308129.index
 371244816.index
 3667087269.index
 1581019508.index
@@ -105,7 +104,6 @@ INDEX VERSION 1.134+D:\PROGRAMAS\curso-microservicios\.metadata\.plugins\org.ecl
 2043775519.index
 3645479900.index
 2612280126.index
-3590559091.index
 3429706405.index
 3881599529.index
 2176496478.index
