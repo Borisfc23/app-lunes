@@ -32,20 +32,6 @@ public class AlumnoController {
 	
 	@Autowired
     private AlumnoService alumnosService;
-	@Autowired
-	private WebClient.Builder webClientBuilder;
-
-	public AlumnoController(WebClient.Builder webClientBuilder) {
-		this.webClientBuilder = webClientBuilder;
-	}
-
-	HttpClient client = HttpClient.create().option(ChannelOption.CONNECT_TIMEOUT_MILLIS, 5000)
-			.option(ChannelOption.SO_KEEPALIVE, true).option(EpollChannelOption.TCP_KEEPIDLE, 300)
-			.option(EpollChannelOption.TCP_KEEPINTVL, 60).responseTimeout(Duration.ofSeconds(10))
-			.doOnConnected(connection -> {
-				connection.addHandlerLast(new ReadTimeoutHandler(5000, TimeUnit.MILLISECONDS));
-				connection.addHandlerLast(new WriteTimeoutHandler(5000, TimeUnit.MILLISECONDS));
-			});
 
 	@PostMapping("/create")
 	public ResponseEntity<?> guardar(@RequestBody AlumnoDTO requestBody) {

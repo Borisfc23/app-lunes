@@ -1,0 +1,119 @@
+2025-01-03 01:12:19 INFO  c.example.alumnos.AlumnosApplication - Starting AlumnosApplication v0.0.1-SNAPSHOT using Java 17.0.13 with PID 1 (/app/app.jar started by spring in /app)
+2025-01-03 01:12:19 INFO  c.example.alumnos.AlumnosApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-03 01:12:19 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://config-server:8888
+2025-01-03 01:12:19 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=ms-alumnos, profiles=[dev], label=null, version=b6ad8c982ab6cc50227d0796b47c85ae6a327e03, state=
+2025-01-03 01:12:21 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-03 01:12:22 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 240 ms. Found 1 JPA repository interface.
+2025-01-03 01:12:22 INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=aceb5872-d338-3d29-952d-5e5ee6165b26
+2025-01-03 01:12:23 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 0 (http)
+2025-01-03 01:12:24 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-01-03 01:12:24 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-03 01:12:24 INFO  o.a.c.c.C.[.[.[/ms-alumnos/v1] - Initializing Spring embedded WebApplicationContext
+2025-01-03 01:12:24 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4787 ms
+2025-01-03 01:12:25 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-03 01:12:25 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-03 01:12:25 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-01-03 01:12:26 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-03 01:12:26 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-01-03 01:12:27 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@54fd5759
+2025-01-03 01:12:27 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-01-03 01:12:27 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-03 01:12:27 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-03 01:12:30 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-03 01:12:30 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-03 01:12:31 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-03 01:12:33 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-03 01:12:36 INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-01-03 01:12:36 WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-01-03 01:12:36 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 18 endpoints beneath base path '/actuator'
+2025-01-03 01:12:36 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 39647 (http) with context path '/ms-alumnos/v1'
+2025-01-03 01:12:36 INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 39647
+2025-01-03 01:12:36 INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-01-03 01:12:36 INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-01-03 01:12:37 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-01-03 01:12:37 INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-01-03 01:12:37 INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-01-03 01:12:37 INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-01-03 01:12:37 INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-01-03 01:12:37 INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-01-03 01:12:37 INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-01-03 01:12:37 INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-01-03 01:12:37 INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-01-03 01:12:37 INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-01-03 01:12:37 INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-01-03 01:12:37 INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1735866757657 with initial instances count: 2
+2025-01-03 01:12:37 INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application MS-ALUMNOS with eureka with status UP
+2025-01-03 01:12:37 INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1735866757679, current=UP, previous=STARTING]
+2025-01-03 01:12:37 WARN  c.n.discovery.InstanceInfoReplicator - Ignoring onDemand update due to rate limiter
+2025-01-03 01:12:37 INFO  c.example.alumnos.AlumnosApplication - Started AlumnosApplication in 20.792 seconds (process running for 22.081)
+2025-01-03 01:12:37 INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-ALUMNOS/c8913bb9ddb6:ms-alumnos:0: registering service...
+2025-01-03 01:12:38 WARN  d.c.b.a.c.r.ApplicationRegistrator - Failed to register application as Application(name=ms-alumnos, managementUrl=http://c8913bb9ddb6:39647/ms-alumnos/v1/actuator, healthUrl=http://c8913bb9ddb6:39647/ms-alumnos/v1/actuator/health, serviceUrl=http://c8913bb9ddb6:39647/ms-alumnos/v1) at spring-boot-admin ([http://localhost:8062/instances]): I/O error on POST request for "http://localhost:8062/instances": Connect to http://localhost:8062 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused. Further attempts are logged on DEBUG level
+2025-01-03 01:12:38 INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-ALUMNOS/c8913bb9ddb6:ms-alumnos:0 - registration status: 204
+2025-01-03 01:13:14 INFO  o.a.c.c.C.[.[.[/ms-alumnos/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-03 01:13:14 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-01-03 01:13:14 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2025-01-03 01:13:14 INFO  c.e.alumnos.service.AlumnoService - Iniciando la tarea...
+2025-01-03 01:13:14 INFO  c.e.alumnos.service.AlumnoService - El nombre es ...gato
+2025-01-03 01:13:14 INFO  c.e.alumnos.service.AlumnoService - El apellido es ...fato
+2025-01-03 01:13:49 INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application MS-ALUMNOS with eureka with status DOWN
+2025-01-03 01:13:49 INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1735866829533, current=DOWN, previous=UP]
+2025-01-03 01:13:49 WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@54fd5759 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-01-03 01:13:49 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-03 01:13:49 WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@3a61694 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-01-03 01:13:49 WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@90d4724 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-01-03 01:13:49 WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2f2eecdd (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-01-03 01:13:49 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-01-03 01:13:49 WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@76e3c9eb (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-01-03 01:13:49 WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@45426315 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-01-03 01:13:49 WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@261528fe (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-01-03 01:13:49 WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7e8570e5 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-01-03 01:13:49 WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@1641424f (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-01-03 01:13:49 WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@40cdd159 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-01-03 01:13:49 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-03 01:13:49 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-01-03 01:13:49 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-01-03 01:13:49 INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2025-01-03 01:13:52 INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2025-01-03 01:13:52 WARN  o.s.b.a.j.DataSourceHealthIndicator - DataSource health check failed
+org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:84)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:342)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.getProduct(DataSourceHealthIndicator.java:122)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.doDataSourceHealthCheck(DataSourceHealthIndicator.java:105)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.doHealthCheck(DataSourceHealthIndicator.java:100)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.cloud.netflix.eureka.EurekaHealthCheckHandler.processContributor(EurekaHealthCheckHandler.java:162)
+	at org.springframework.cloud.netflix.eureka.EurekaHealthCheckHandler.getStatus(EurekaHealthCheckHandler.java:147)
+	at org.springframework.cloud.netflix.eureka.EurekaHealthCheckHandler.getHealthStatus(EurekaHealthCheckHandler.java:140)
+	at org.springframework.cloud.netflix.eureka.EurekaHealthCheckHandler.getStatus(EurekaHealthCheckHandler.java:129)
+	at com.netflix.discovery.DiscoveryClient.refreshInstanceInfo(DiscoveryClient.java:1385)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.sql.SQLException: HikariPool-1 - Interrupted during connection acquisition
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:183)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:144)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:127)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	... 18 common frames omitted
+Caused by: java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:906)
+	at com.zaxxer.hikari.util.ConcurrentBag.borrow(ConcurrentBag.java:151)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:162)
+	... 23 common frames omitted
+2025-01-03 01:13:52 INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-ALUMNOS/c8913bb9ddb6:ms-alumnos:0 - deregister  status: 200
+2025-01-03 01:13:52 INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient

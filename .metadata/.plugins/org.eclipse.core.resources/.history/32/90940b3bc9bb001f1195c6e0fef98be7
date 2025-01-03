@@ -1,7 +1,0 @@
-package com.synopsis.capacitacion.product.service;
-
-import com.synopsis.capacitacion.product.entities.ProductEntity;
-
-public interface ProductService {
-	public ProductEntity getById(Long id);
-}

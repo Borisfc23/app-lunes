@@ -1,5 +1,0 @@
-package com.synopsis.capacitacion.service;
-
-public interface ProductService {
-
-}

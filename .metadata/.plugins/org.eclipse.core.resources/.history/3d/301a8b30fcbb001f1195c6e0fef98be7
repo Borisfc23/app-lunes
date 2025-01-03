@@ -1,8 +1,0 @@
-package com.synopsis.capacitacion.customer.entities;
-
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class TransactionDTO {
-
-}

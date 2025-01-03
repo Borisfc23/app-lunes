@@ -8,12 +8,15 @@ import com.example.alumnos.entity.AlumnoDTO;
 import com.example.alumnos.entity.Alumnos;
 import com.example.alumnos.entity.ExternalApiResponse;
 import com.example.alumnos.repository.AlumnoRepository;
+
+import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
+
+@Slf4j
 @Service
 public class AlumnoService {
 	@Autowired
@@ -25,9 +28,7 @@ public class AlumnoService {
 	@Autowired
 	private AlumnoRepository alumnosRepository;
 	
-	private static final Logger log = LoggerFactory.getLogger(AlumnoService.class);
 
-	private static final String EXTERNAL_API_URL = "https://jsonplaceholder.typicode.com/posts";
 
 	public void enviarYGuardarAlumno(AlumnoDTO request) {
 		log.info("Iniciando la tarea...");        

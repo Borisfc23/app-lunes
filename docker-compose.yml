@@ -97,6 +97,8 @@ services:
     #   - "8082:8082"
     networks:
       - my_network
+    volumes:
+      - ./logs:/logs
 
   ms-keycloack-adapter:
     container_name: ms-keycloack-adapter
